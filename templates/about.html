@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Add FontAwesome library link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFfnyIxbdOT+XqjsozG2P92QfSA" crossorigin="anonymous">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -17,34 +14,6 @@
             flex-direction: column;
             min-height: 100vh;
         }
-		/* Updated CSS for dropdown menu */
-			.group:hover .dropdown-content {
-				display: block;
-			}
-
-			.dropdown-content {
-				display: none;
-				position: absolute;
-				background-color: black;
-				color: white;
-				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-				z-index: 1;
-				pointer-events: auto; /* Allow pointer events on dropdown */
-			}
-
-			.dropdown-content a {
-				color: white;
-				padding: 12px 16px;
-				text-decoration: none;
-				display: block;
-			}
-
-			.dropdown-content a:hover {
-				background-color: gray;
-			}
-
-
-
 
         .header-container {
             display: flex;
@@ -100,23 +69,21 @@
             font-size: 1rem;
         }
 
-       .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px 30px; /* Adjust padding as needed */
-    color: #ffffff;
-    background-color: #870E03;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-family: 'Poppins', sans-serif;
-    flex-wrap: wrap;
-    z-index: 1000;
-    width: 100%;
-}
-
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0px 30px;
+            color: #ffffff;
+            background-color: #870E03;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-family: 'Poppins', sans-serif;
+            flex-wrap: wrap;
+            z-index: 1000;
+        }
 
 
         .footer__section {
@@ -139,21 +106,14 @@
         .footer__addr h2 {
             margin-top: 0.4em;
             font-size: 15px;
-            font-weight: 600;
+            font-weight: 400;
         }
 
         .nav__title {
             margin-top: 0.4em;
             font-size: 15px;
-            font-weight: 600;
+            font-weight: 400;
             margin-left: auto;
-        }
-		.nav__title1 {
-            margin-top: 0.4em;
-            font-size: 15px;
-            font-weight: 600;
-            margin-left: auto;
-			margin-left: 110px;
         }
 
         .footer address {
@@ -201,9 +161,6 @@
         .nav__ul a {
             color: white;
         }
-		.nav__ul1{
-		    margin-left: 110px;
-		}
 
         @media screen and (min-width: 24.375em) {
             .legal .legal__links {
@@ -265,19 +222,18 @@
             margin-top: -150px;
         }
 
-       .course-grid {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 2rem;
-          margin-bottom: 100px;
-          max-width: 1200px;
-          margin: 0 auto; /* Center the container horizontally */
-          overflow: hidden;
-          margin-left: 0px; /* Add margin to the left */
-          margin-right: 180px; /* Add margin to the right */
-}
-
+        .course-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 100px;
+            max-width: 1200px;
+            /* Added max-width */
+            margin: 0 auto;
+            /* Center the container horizontally */
+            overflow: hidden;
+        }
 
         .course-item {
             background-color: #fff;
@@ -400,7 +356,7 @@
 
 <body>
     <header class="header-container">
-        <img src="images/logo.png" alt="College Logo" class="logo">
+        <img src="/static/images/logo.jpg" alt="Logo" class="logo">
         <div class="text-column">
             <h1 class="text-4xl font-semibold main-heading">Keshav Memorial College Of Engineering</h1>
             <p class="text-lg font-medium sub-heading mt-2">A unit of Keshav Memorial Technical Educational Society
@@ -410,157 +366,166 @@
     </header>
 
     <header class="text-gray-600 body-font navbar" role="navigation">
-        <div class="container mx-auto relative flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a href="index.html" class="flex title-font font-medium items-center mb-4 md:mb-0">
-               
-            </a>
-            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 hover:text-lightgray" href="index.html">HOME</a>
-                <a class="mr-5 hover:text-lightgray" href="about.html">ABOUT US</a>
-                <a class="mr-5 hover:text-lightgray" href="check_indent.py">GENERATE AN INDENT</a>
-                <a class="mr-5 hover:text-lightgray" href="check_indent.py">GENERATE AN IV</a>
-				<a class="mr-5 hover:text-lightgray" href="rvform.py">GENERATE A RV</a>
-                <a class="mr-5 hover:text-lightgray" href="reqdetails.py">HOD DEMANDS</a>
-				
-				<div class="dropdown">
-					<div class="dropdown-content">
-					</div>
-				</div>
-			
-				<a href="index.html" class="flex title-font font-medium items-center mb-4 md:mb-0"></a>
-				<nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-				 <!-- Updated code with the form to display employee details -->
-				   <div class="relative group">
-		<a class="mr-5 cursor-pointer">CONTACT SUPPLIERS</a>
-		<div class="dropdown-content">
-			<form id="supplierForm" method="post" style="display: none;">
-				<input type="hidden" name="action" value="">
-			</form>
-			<a onclick="submitForm_sup('Display')">Display</a>
-			
-			<div class="dropdown-divider"></div>
-			
-		</div>
-	</div>
-	<script>
-		function submitForm_sup(action) {
-
-			var form1 = document.getElementById('supplierForm');
-			form1.action = action.toLowerCase() + '_sup.py';
-			form1.querySelector('input[name="action"]').value = action;
-			form1.submit();
-		}
-	</script>
-	       <div class="relative group">
-		<a class="mr-5 cursor-pointer">CONTACT STAFF</a>
-		<div class="dropdown-content">
-			<form id="employeeForm" method="post" style="display: none;">
-				<input type="hidden" name="action" value="">
-			</form>
-			<a onclick="submitForm_emp('Display')">Display</a>
-			
-			<div class="dropdown-divider"></div>
-			
-		</div>
-	</div>
-	<script>
-		function submitForm_emp(action) {
-
-			var form1 = document.getElementById('employeeForm');
-			form1.action = action.toLowerCase() + '_emp.py';
-			form1.querySelector('input[name="action"]').value = action;
-			form1.submit();
-		}
-	</script>
+        <div class="container mx-auto relative flex flex-wrap p-5 flex-col md:flex-row items-start">
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-start text-base justify-center">
+                <a class="mr-5 hover:text-lightgray" href="/">HOME</a>
+                <a class="mr-5 hover:text-lightgray" href="/about">ABOUT US</a>
+                <a class="mr-5 hover:text-lightgray" href="/login">LOGIN</a>
+                
             </nav>
         </div>
     </header>
     <main class="content">
         <section class="courses-offered">
+            <h2 class="text-3xl font-semibold mb-8">Courses Offered</h2>
             <div class="course-grid">
                 <div class="course-item">
                     <div class="course-icon">
                         <i class="fas fa-desktop"></i>
                     </div>
-                    <h3 class="course-title">What is Indent?</h3>
-                    <p class="course-description">An indent form requests inventory procurement or replenishment, detailing item info, quantities, requester details, date, and instructions.</p>
+                    <h3 class="course-title">CSE</h3>
+                    <p class="course-description">Computer Science and Engineering</p>
                 </div>
                 <div class="course-item">
                     <div class="course-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
-                    <h3 class="course-title">What is IV?</h3>
-                    <p class="course-description">An issue voucher, or IV, is a brief document detailing an issued invoice, crucial for accounting and financial tracking.</p>
+                    <h3 class="course-title">CSD</h3>
+                    <p class="course-description">Computer Science and Engineering(Data Science)</p>
                 </div>
                 <div class="course-item">
                     <div class="course-icon">
                         <i class="fas fa-cloud-rain"></i>
                     </div>
-                    <h3 class="course-title">What is RV?</h3>
-                    <p class="course-description">A receipt voucher, or RV, is a concise document confirming received payment or goods, essential for accurate financial records.</p>
+                    <h3 class="course-title">CSM</h3>
+                    <p class="course-description">Computer Science and Engineering(AI&ML)</p>
+                </div>
+                <div class="course-item">
+                    <div class="course-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 class="course-title">CSE(CS)</h3>
+                    <p class="course-description">Computer Science and Engineering (Cyber Security)</p>
+                </div>
+                <div class="course-item">
+                    <div class="course-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3 class="course-title">CSE(IoT)</h3>
+                    <p class="course-description">Computer Science and Engineering (Internet of Things)</p>
+                </div>
+                <div class="course-item">
+                    <div class="course-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="course-title">ECE</h3>
+                    <p class="course-description">Electronics and Communication Engineering</p>
                 </div>
             </div>
         </section>
-		 <footer class="footer">
-        <div class="footer_section footer_addr">
-            <h2>Contact</h2>
-            <address style="color: white;">
-                Office : 8499981497<br>
-            </address>
-        </div>
-        <div class="footer__section">
-            <h2 class="nav__title1">Email id:</h2>
-            <ul class="nav__ul1">
-                <li><a href="mailto:admin@kmce.in" style="color: white;">admin@kmce.in</a></li>
-            </ul>
-        </div>
-        <div class="footer__section">
-            <h2 class="nav__title">Landline:</h2>
-            <ul class="nav__ul" style="color: white;">
-                <li><a href="tel:040-xxxx-123">040-xxxx-123</a></li>
-            </ul>
-        </div>
-        <div class="footer__section">
-            <h2 class="nav__title">Address:</h2>
-            <ul class="nav__ul" style="color: white;">
-                <li><a href="#">Koheda Road, Ibrahimpatnam</a></li>
-            </ul>
-        </div>
-    </footer>
 
-    <script>
-        function showInfo(sectionId) {
-            var sections = document.querySelectorAll('.info-section');
-            sections.forEach(function (section) {
-                section.classList.remove('active');
-            });
-            var section = document.getElementById(sectionId);
-            section.classList.add('active');
-        }
-    </script>
-</body>
-
-</html>
+        <nav class="vertical-nav" role="navigation">
+            <a href="#director" class="nav-link" onclick="showInfo('director-info')">Director</a>
+            <a href="#principal" class="nav-link" onclick="showInfo('principal-info')">Principal</a>
+            <a href="#founder" class="nav-link" onclick="showInfo('founder-info')">Founder</a>
+        </nav>
 
 
+        <section class="info-section" id="director-info">
+            <h2 id="director" class="text-3xl font-semibold main-heading mb-4">About Director</h2>
+            <div class="director-info">
+                <img src=images/d.jpg alt="Director's Photo" class="director-photo">
+                <div class="director-text">
+                    <p class="text-base text-gray-700">Aditya Godse, the Director of Keshav Memorial College of
+                        Engineering (KMCE), has an extensive background in both technical and managerial education. He
+                        completed his undergraduate studies in Electronics and Communication Engineering (B.Tech ECE) in
+                        2005 and went on to earn a Masters in Computer Science (M.Tech CSE) and a Masters in Business
+                        Administration (MBA) from Jawaharlal Nehru Technological University Hyderabad (JNTUH).
+                        Aditya is known for his proactive approach, swift decision-making capabilities, and extensive
+                        administrative experience, which he brings to both KMCE and KSJC.
+                    </p>
                 </div>
-            </div>
+        </section>
+        <section class="info-section" id="principal-info">
+            <h2 id="principal" class="text-3xl font-semibold main-heading mb-4">About Principal</h2>
+            <div class="principal-info">
+                <img src="/static/images/p.jpg" alt="Principal's Photo" class="principal-photo">
+                <div class="principal-text">
+                    <p class="text-base text-gray-700">Dr. Ramesh Rao, the Principal of Keshav Memorial College of
+                        Engineering, has been at the helm of academic affairs since 2015. With a Ph.D. in Computer
+                        Science from JNTU Hyderabad and over 20 years of experience in academia, Dr. Rao has led
+                        numerous research projects and published extensively in international journals. His vision for
+                        the institution is to foster innovation and excellence in engineering education.
+                        He acted as NBA Coordinator in CMRIT and SVIT. He has guided a number of B.Tech and M.Tech
+                        student's projects. He has organized a number of Conferences and Faculty Development Programs.
+                    </p>
+                </div>
+        </section>
+        <section class="info-section" id="founder-info">
+            <h2 id="founder" class="text-3xl font-semibold main-heading mb-4">About Founder</h2>
+            <div class="founder-info">
+                <img src="/static/images/f.jpg" alt="Founder's Photo" class="founder-photo">
+                <div class="founder-text">
+                    <p class="text-base text-gray-700">Mr. Neil Gogte is the Founder Director and heads KMIT(Keshav
+                        Memorial Institute of Technology). He is a Masters Degree holder in Computer Science from IIT -
+                        Mumbai and got his B.E degree from Osmania University, Hyderabad in 1985. He started his career
+                        with CMC Ltd., and was part of the development team of Office Mate, an Office Automation
+                        application. He was then part of the team at Sun Microsystems, USA, for the development of
+                        SUNRAI, an interface to the backend ERP applications running on IBM systems. Recently, He also
+                        headed the Leapstone Incs India Offshore development center.</p>
         </section>
     </main>
 
+    <footer class="footer">
+        <div class="footer__section footer_addr">
+            <h2>Contact</h2>
+            <address>
+                Office : 8499981497<br>
+            </address>
+        </div>
+
+        <div class="footer__section">
+            <h2 class="nav__title">Email id:</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="mailto:admin@kmce.in">admin@kmce.in</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__section">
+            <h2 class="nav__title">Landline:</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="tel:040-xxxx-123">040-xxxx-123</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__section">
+            <h2 class="nav__title">Address:</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="#">Koheda Road, Ibrahimpatnam</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <script>
         function showInfo(sectionId) {
-            var sections = document.querySelectorAll('.info-section');
-            sections.forEach(function (section) {
+            // Hide all info sections
+            const infoSections = document.querySelectorAll('.info-section');
+            infoSections.forEach(section => {
                 section.classList.remove('active');
+                section.style.opacity = '0';
             });
-            var section = document.getElementById(sectionId);
-            section.classList.add('active');
-        }
-   
-</body>
-</html>
 
+            // Show the selected info section
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+            setTimeout(() => selectedSection.style.opacity = '1', 10);
+        }
+    </script>
 </body>
 
 </html>
